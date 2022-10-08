@@ -29,8 +29,8 @@
   
   ![image](https://user-images.githubusercontent.com/77119237/194703472-baa8adf1-a581-42c5-8501-9b67ba461995.png)
 
-<li>Ensure the there is no merge conflicts and all checks have been passed</li>
-  <li>Give a proper title and explain what you did in description</li>
+<li>Ensure that there is no merge conflicts and all checks have been passed</li>
+<li>Give a proper title and explain what you did in description</li>
 
 </ol>
 
