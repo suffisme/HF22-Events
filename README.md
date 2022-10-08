@@ -20,10 +20,6 @@
       (Neural Networks Archs-codes/Demonstration guide of new packages are heartly welcome !)</li>
 
 <li>React UI Components , NodeJS Magic Snippets </li>
-
-<li>User Interfaces built on top of HTML, CSS , JS , Bootstrap standalone</li>
-
-<li>Arduino/Verilog/VHDL Magic scripts </li>
 </ol>
 </code>
 </pre>
