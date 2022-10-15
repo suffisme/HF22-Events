@@ -1,3 +1,8 @@
+
+//this are the changes made by
+//Shraman
+
+
 body {
     font-size: 16px;
     font-family: Comic Sans MS;
@@ -115,7 +120,7 @@ a.certified:hover {
 }
 
 div#main-card:hover {
-    -webkit-animation-name: pulse;  
+    -webkit-animation-name: pulse;
     animation-name: pulse;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
