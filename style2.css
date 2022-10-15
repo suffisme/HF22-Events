@@ -87,7 +87,7 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: blue;
 }
 
 ul {
@@ -106,7 +106,7 @@ ul {
 }
 
 a.certified {
-  color: blue;
+  color: black;
   cursor: pointer;
 }
 
