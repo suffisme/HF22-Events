@@ -150,3 +150,25 @@ div#main-card:hover {
         transform: scale3d(1, 1, 1);
     }
 }
+
+.remain{
+    display: inline-block;
+}
+
+.remain button{
+    padding: 10px 30px;
+    margin-top: 10px;
+    font-size: 22px;
+    background-color: rgba(89, 81, 81, 0.2);
+    color: white;
+    border: 2px solid #000000;
+    transition: 0.4s ;
+    border-radius: 5px;
+}
+
+.remain button:hover{
+    position: relative;
+    background-color: rgba(96, 88, 88, 0.5);
+    color: #000000;
+    cursor: pointer;
+}
