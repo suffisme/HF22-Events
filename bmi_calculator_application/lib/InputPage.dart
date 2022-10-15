@@ -66,6 +66,36 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Expanded(
+            child: ReusableCard(
+              onTapFunction: () {},
+              colour: unselectedBackgroundColor,
+              cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'HEIGHT',
+                    style: labelTextStyle,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.ideographic,
+                    children: <Widget>[
+                      Text(
+                        height.toString(),
+                        style: heightTextStyle,
+                      ),
+                      Text(
+                        'cm',
+                        style: labelTextStyle,
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Expanded(
             child: Row(
               children: <Widget>[
                 Expanded(
