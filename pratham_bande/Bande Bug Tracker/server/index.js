@@ -14,8 +14,7 @@ app.use(
   );
 
 const mongoose = require('mongoose');
-const MONGODB_URI = 'mongodb+srv://bandeBugTracker:BandeTracksBug@cluster0.d2ltj2p.mongodb.net/BugTrack?retryWrites=true&w=majority';
-// const MONGODB_URI = 'mongodb+srv://bandeBugTracker:BandeTracksBug@cluster0.d2ltj2p.mongodb.net/BugTrack';
+const MONGODB_URI = 'mongodb+srv://***:***@cluster0.d2ltj2p.mongodb.net/**?retryWrites=true&w=majority';
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const store = new MongoDBStore({
