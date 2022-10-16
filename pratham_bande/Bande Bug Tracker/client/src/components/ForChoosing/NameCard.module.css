@@ -1,0 +1,9 @@
+.cardDiv{
+    background-color: brown;
+    border-radius: 5px;
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

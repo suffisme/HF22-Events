@@ -1,0 +1,39 @@
+.control {
+    margin: 1rem 0;
+  }
+  
+  .control label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  .control input,
+  .control textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    padding: 0.2rem;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+  }
+  
+  .control input:focus,
+  .control textarea:focus {
+    outline: none;
+    border-color: #230052;
+  }
+  
+  .button{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background-color: rgb(72, 160, 21);
+      border-radius: 12rem;
+      padding: 1rem;
+      color: rgb(17, 3, 12);
+      padding: 0.75rem 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+  .button:hover{
+    background-color: rgb(87, 190, 28);
+  }
