@@ -1,0 +1,3 @@
+https://medical-pager02.herokuapp.com/  - back
+
+https://medical-pager02.netlify.app/  - front
