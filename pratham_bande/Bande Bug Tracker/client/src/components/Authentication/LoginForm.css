@@ -1,0 +1,161 @@
+.for-form {
+  font-weight: 300;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  margin-top: 10px;
+  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: end;
+}
+
+.form-control input,
+.form-control label {
+  display: inline;
+}
+
+.form-control label {
+  margin-bottom: 0.5rem;
+}
+
+.form-control input,
+.form-control select {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+  margin-left: 15px;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: #28cd36;
+  background-color: #90f098;
+}
+
+.control-group {
+  display: flex;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.control-group .form-control {
+  min-width: 15rem;
+  flex: 1;
+}
+
+/* button {
+  font: inherit;
+  background-color: #240370;
+  color: white;
+  border: 1px solid #240370;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background-color: #33059e;
+  border-color: #33059e;
+} */
+
+.form-actions {
+  text-align: center;
+}
+
+.form-actions button {
+  margin-left: 1rem;
+}
+
+.invalid input {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+}
+
+.invalid input:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
+
+.error-text {
+  color: #b40e0e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.form-actions button {
+  font-size: 1.25rem;
+  background: #02050d;
+  color: #fff;
+  border: 0.15rem solid #4e0c0c;
+  border-radius: 4px;
+  padding: 0.85em 0.75em;
+  margin: 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.form-actions button:hover {
+  color: #02050d;
+}
+
+.form-actions button::after {
+  content: "";
+  background: #a30613;
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+}
+
+.form-actions button[class^="grow"]::after {
+  transition: all 0.3s ease;
+}
+
+.form-actions button[class^="grow"]:hover::after {
+  transition: all 0.3s ease-out;
+}
+
+.form-actions button.grow_skew_forward::after {
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+}
+
+.form-actions button.grow_skew_forward:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+}
+
+.form-actions button.grow_skew_backward::after {
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(45deg) scale(0, 1);
+}
+
+.form-actions button.grow_skew_backward:hover::after {
+  transform: skewX(45deg) scale(1, 1);
+}
+
+.form-actions button.grow_spin::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0) rotate(-180deg);
+}
+
+.form-actions button.grow_spin:hover::after {
+  transform: scale(1, 1) rotate(0deg);
+}
