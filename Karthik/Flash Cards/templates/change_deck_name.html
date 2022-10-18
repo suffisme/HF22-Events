@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}Edit Deck{% endblock %}
+{% block content %}
+<body class="text-center">
+    <h1>Edit Deck</h1><br>
+    <div class="container" style="margin-top: 75px;">
+        <form method="POST" class="form-signin" style="color:white">
+            <br>
+            {{ form.update_name.label() }}
+            {{ form.update_name(class="form-control", placeholder="Enter Updated Deck Name") }}
+            <br><br><br>
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+            <br>
+        </form>
+    </div>
+</body>
+{% endblock %}

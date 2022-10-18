@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% block title %}Users{% endblock %}
+{% block content %}
+    <br>
+    <div class="text-center">
+    <h1>Users</h1>
+    <br>
+    </div>
+    <br>
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Username</th>
+                <th scope="col">Email ID</th>
+                <th scope="col">Average Score</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(l) %}
+                {% if not users[i].username == "admin" %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ users[i].username }}</td>
+                        <td>{{ users[i].email }}</td>
+                        {% if not avg[i] == -1 %}
+                            <td>{{ avg[i] }}</td>
+                        {% else %}
+                            <td> - </td>
+                        {% endif %}
+                        <td>
+                            <a class="btn btn-outline btn-info" href="{{ url_for('view_user', uid=users[i].user_id) }}">View Decks</a>
+                            <a class="btn btn-outline btn-danger" href="{{ url_for('admin_delete_user', uid=users[i].user_id) }}">Delete User</a>
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+    <style>
+        thead {
+            background-color:#045551
+        }
+
+        tbody {
+            background-color:#078872
+        }
+    </style>
+{% endblock %}

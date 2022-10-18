@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block title %}View Profile{% endblock %}
+{% block content %}
+<body>
+    <br><h1 class="text-center">Profile</h1><br>
+    <div style="float: left; margin-left: 8rem;">
+        <div style="float: left">
+            <img src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" width="200" height="200">
+        </div>
+        <div style="float: right; margin-left:2rem">
+            <h4><strong>Name: </strong>{{ item.username }}</h4><br>
+            <h4><strong>Email: </strong><a style="text-decoration:none; color: white" href="mailto:{{ item.email }}"> {{ item.email }}</h4><br>
+            <h4><strong>Decks: </strong></h4>
+            <ul>
+                {% for i in decks %}
+                    <li><a style="text-decoration:none; color: white" href="{{ url_for('view_deck', uid=uid, deckid=i.id) }}">{{ i.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+{% endblock %}

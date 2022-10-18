@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block title %}Decks{% endblock %}
+{% block content %}
+    <br>
+    <div class="text-center">
+    <h1>{{ owner.username }}'s Dashboard</h1>
+    </div>
+    <br>
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Deck Score</th>
+                <th scope="col">Last Score</th>
+                <th scope="col">Last Reviewed</th>
+                <th scope="col">Times Reviewed</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(l) %}
+                <tr>
+                    <td></td>
+                    <td>{{ items[i].name }}</td>
+                    <td>{{ items[i].score }}</td>
+                    <td>{{ items[i].last_score }}</td>
+                    <td>{{ items[i].last_review|string|truncate(19, True, '', 0) }}</td>
+                    <td>{{ items[i].times }}</td>
+                    <td>
+                        {% if cards[i]%}
+                        <a class="btn btn-outline btn-info" href="{{ url_for('admin_show_card', uid=uid, deckid=items[i].id, cardid=cards[i].id) }}">Open Deck</a>
+                        <a class="btn btn-outline btn-warning" href="{{ url_for('admin_list_cards', uid=uid, deckid=items[i].id) }}">View Cards</a>
+                        {% endif %}
+                        <a class="btn btn-outline btn-danger" href="{{ url_for('admin_delete_deck', uid=uid, deckid=items[i].id) }}">Delete Deck</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <style>
+        thead {
+            background-color:#045551
+        }
+
+        tbody {
+            background-color:#078872
+        }
+    </style>
+{% endblock %}
