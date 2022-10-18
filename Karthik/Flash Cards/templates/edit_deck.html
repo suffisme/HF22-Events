@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block title %}Edit Deck{% endblock %}
+{% block content %}
+    <br>
+    <div class="text-center">
+    <h1>Edit Deck</h1>
+    <br>
+    <a class="btn btn-lg btn-outline btn-info"  href="{{ url_for('change_deck_name', uid=uid, deckid=deckid) }}">Change Deck Name</a> <br><br>
+    <a class="btn btn-lg btn-outline btn-success"  href="{{ url_for('add_card', uid=uid, deckid=deckid) }}">Add Card</a>
+    </div>
+    <br>
+    <table class="table table-hover table-dark" style="background-color:#036d5b;">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Question</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+                <tr>
+                    <td></td>
+                    <td>{{ item.question }}</td>
+                    <td>
+                        <a class="btn btn-outline btn-danger" href="{{ url_for('delete_card', uid=uid, deckid=deckid, cardid=item.id) }}">Delete Card</a>
+                        <a class="btn btn-outline btn-warning" href="{{ url_for('edit_card', uid=uid, deckid=deckid, cardid=item.id) }}">Edit Card</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div style="text-align:center;"><a class="btn btn-outline btn-info" href="{{ url_for('decks', uid=uid, deckid=deckid) }}">Back</a></div>
+    <style>
+        thead {
+            background-color:#045551
+        }
+
+        tbody {
+            background-color:#078872
+        }
+    </style>
+{% endblock %}

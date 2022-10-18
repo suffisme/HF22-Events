@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    <br>
+    <div class="text-center">
+    <h1>Dashboard</h1>
+    <br>
+    <a class="btn btn-lg btn-outline btn-success" href="{{ url_for('add_deck', uid=uid) }}">Add Deck</a>
+    </div>
+    <br>
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Deck Score</th>
+                <th scope="col">Last Score</th>
+                <th scope="col">Last Reviewed</th>
+                <th scope="col">Times Reviewed</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(l) %}
+                <tr>
+                    <td></td>
+                    <td>{{ items[i].name }}</td>
+                    <td>{{ items[i].score }}</td>
+                    <td>{{ items[i].last_score }}</td>
+                    <td>{{ items[i].last_review|string|truncate(19, True, '', 0) }}</td>
+                    <td>{{ items[i].times }}</td>
+                    <td>
+                        <a class="btn btn-outline btn-success" href="{{ url_for('add_card', uid=uid, deckid=items[i].id) }}">Add Card</a>
+                        {% if cards[i] %}
+                        <a class="btn btn-outline btn-info" href="{{ url_for('show_card', uid=uid, deckid=items[i].id, cardid=cards[i].id) }}">Open Deck</a>
+                        {% endif %}
+                        <a class="btn btn-outline btn-warning" href="{{ url_for('edit_deck', uid=uid, deckid=items[i].id) }}">Edit Deck</a>
+                        <a class="btn btn-outline btn-dark" href="{{ url_for('reset_deck', uid=uid, deckid=items[i].id) }}">Reset Score</a>
+                        <a class="btn btn-outline btn-primary" href="{{ url_for('clear_deck', uid=uid, deckid=items[i].id) }}">Clear Deck</a>
+                        <a class="btn btn-outline btn-danger" href="{{ url_for('delete_deck', uid=uid, deckid=items[i].id) }}">Delete Deck</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <style>
+        thead {
+            background-color:#045551
+        }
+
+        tbody {
+            background-color:#078872
+        }
+    </style>
+{% endblock %}

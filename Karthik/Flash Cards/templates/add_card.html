@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block title %}
+Add Card
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-signin" style="color:white">
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal text-center">
+                Enter Card Description
+            </h1>
+            <br>
+            {{ form.question.label() }}
+            {{ form.question(class="form-control", placeholder="Enter Question") }}
+            <br>
+            {{ form.answer.label() }}
+            {{ form.answer(class="form-control", placeholder="Enter Answer") }}
+            <br>
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+            <br>
+        </form>
+    </div>
+</body>
+{% endblock %}

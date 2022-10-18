@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block title %}
+Add Deck
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-signin" style="color:white">
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal text-center">
+                Enter Deck Description
+            </h1>
+            <br>
+            {{ form.name.label() }}
+            {{ form.name(class="form-control", placeholder="Enter Deck Name") }}
+            <br>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+            <br>
+
+        </form>
+    </div>
+</body>
+{% endblock %}
