@@ -1,6 +1,6 @@
 <h1>CSEA@HacktoberFest 2022</h1>
 
-<p><code>Computer Science and Engineering Association (CSEA) NITW </code> is accepting your contributions under the hood of <code>Hacktoberfest</code>!!</p>
+`Computer Science and Engineering Association (CSEA) NITW` is accepting your contributions under the hood of <code>Hacktoberfest</code>!!
 
 <h4>
   <code>Contribute</code>-><code>Learn</code>-><code>Earn goodies</code> (The first 40,000 participants who complete Hacktoberfest can elect to receive either a tree planted in their name, or the Hacktoberfest 2022 t-shirt.)

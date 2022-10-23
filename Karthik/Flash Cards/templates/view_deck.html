@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block title %}Edit Deck{% endblock %}
+{% block content %}
+    <br>
+    <div class="text-center">
+    <h1>{{ deck_to_view.name }}</h1>
+    <br>
+    </div>
+    <br>
+    <table class="table table-hover table-dark" style="background-color:#036d5b;">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Question</th>
+                <th scope="col">Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+                <tr>
+                    <td></td>
+                    <td>{{ item.question }}</td>
+                    <td>{{ item.answer }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div style="text-align:center;"><a class="btn btn-outline btn-info" href="{{ url_for('view_profile', uid=uid) }}">Back</a></div>
+    <style>
+        thead {
+            background-color:#045551
+        }
+
+        tbody {
+            background-color:#078872
+        }
+    </style>
+{% endblock %}
