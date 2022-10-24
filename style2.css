@@ -16,7 +16,7 @@ body {
 
 div#main-card {
     max-width: 300px;
-    box-shadow: -5px 2px 18px 4px #ccc;
+    box-shadow: -5px 2px 18px 4px #cccccc;
 }
 
 .cover-photo {
