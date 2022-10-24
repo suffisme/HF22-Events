@@ -1,5 +1,5 @@
 body {
-    font-size: 16.5px;
+    font-size: 16px;
     font-family: Comic Sans MS;
     padding: 50px 0;
     display: -webkit-box;
@@ -87,7 +87,7 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: blue;
 }
 
 ul {
@@ -106,7 +106,7 @@ ul {
 }
 
 a.certified {
-  color: blue;
+  color: black;
   cursor: pointer;
 }
 
