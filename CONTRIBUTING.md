@@ -14,7 +14,7 @@
 <p>Pull requests are the best way to propose changes to the codebase. We actively welcome your pull requests:</p>
 
 <ol>
-<li> Fork ❤ the repo and create your branch from master or you can work from master also from your forked repo.</li>
+<li> **Fork** the repo and create your branch from master or you can work from master also from your forked repo.</li>
   
   ![image](https://user-images.githubusercontent.com/77119237/194703299-2b8d5a8a-40fa-4363-9a64-5557f2e6fc28.png)
 
