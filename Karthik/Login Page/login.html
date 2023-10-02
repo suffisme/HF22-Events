@@ -5,18 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+        }
+
+        .login-container h1 {
+            text-align: center;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-input {
+            margin-bottom: 15px;
+        }
+
+        .form-input label {
+            font-weight: bold;
+        }
+
+        .form-input input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        .form-input input[type="text"],
+        .form-input input[type="password"] {
+            width: 92%;
+        }
+
+        .login-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <form>
-        <p>Username: <input type="text" placeholder="Enter username"/></p>
-        <p>Password: <input type="password" placeholder="Enter password"/></p>
-        <p><input type="submit"/></p>
-    </form>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form class="login-form" action="your_login_handler.php" method="POST">
+            <div class="form-input">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-input">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <input type="submit" class="login-button" value="Login">
+        </form>
+    </div>
 </body>
-<style>
-   body {
-   background-color: #0F044C;
-   color: white;
-   }
-</style>
 </html>
